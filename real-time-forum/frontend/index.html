@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/UI/css/style.css">
+    <title>Real-time Forum</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="profile">
+            <nav>
+                <button class="profile_button" onclick="openLoginPage()">Login</button>
+                <button class="profile_button" onclick="openRegisterPage()" id="login_link">Register</button>
+                <button class="profile_button" onclick="logoutToLoginPage()">Logout</button>
+            </nav>
+        </div>
+        <div class="create-post">
+            <nav>
+                <button class="profile_button" onclick="openCreatePost()">Create Posts</button>
+            </nav>
+        </div>
+        <div class="home">
+            <nav>
+                <button class="profile_button">Post</button>
+            </nav>
+        </div>
+
+        <!-- chat  -->
+        <div class="messagerie">
+            <div class="chat-box" id="chat-box"></div>
+        </div>
+
+
+        <div class="button">
+            <nav>
+                <button class="profile_button">Home</button>
+                <button class="profile_button">Settings</button>
+                <button class="profile_button">About</button>
+            </nav>
+        </div>
+        <div class="post-container"></div>
+    </div>
+
+    <!-- register -->
+    <div class="registerContainer">
+        <div class="title">
+            <p>Register</p>
+        </div>
+        
+        <form>
+            <div class="user-box">
+                <input type="text" name="" required="">
+                <label>First Name</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="" required="">
+                <label>Last Name</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="" required="">
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="number" required="">
+                <label>Age</label>
+            </div>
+            <div class="user-box">
+                <input type="email" required="">
+                <label>Email</label>
+            </div>
+            <div class="user-box">
+                <input type="gender" required=""> 
+                <label>Gender</label> <!-- add select-->
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required="">
+                <label>Password</label>
+            </div>
+            <div class="user-button">
+                <input class="input_register" type="submit" onclick="clickOnRegister()" value="register">
+            </div>
+            <form>
+    </div>
+
+    <div class="loginContainer">
+        <div class="title">
+            <p>Login</p>
+        </div>
+        <form>
+            <div class="user-box">
+                <input type="text" name="" required="">
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required="">
+                <label>Password</label>
+            </div>
+            <div class="user-button">
+                <input type="submit" onclick="clickOnLogin()" value="Login">
+            </div>
+        </form>
+    </div>
+
+    <div class="createPostContainer">
+        <div class="title">
+            <p>Create Post</p>
+        </div>
+        <form>
+            <div class="create-post_box">
+                <input type="text" name="" required="">
+                <label>Title</label>
+            </div>
+            <div class="create-post_box">
+                <input type="text" name="" required="">
+                <label>Content</label>
+            </div>
+            <div class="    ">
+                <select name="categorie" class="Categorie-select">
+                    <option value="">
+                        <!-- templates golang -->
+                    </option>
+                </select>
+            </div>
+            <div class="create-post-button">
+                <input type="submit" onclick="clickOnCreate()" value="Create">
+            </div>
+        </form>
+    </div>
+
+    <div class="post_content">
+        <!-- template golang -->
+    </div>
+    <div class="post">
+        <div class="titre"></div>
+        <div class="username"></div>
+        <div class="categorie"></div>
+        <div class="content"></div>
+        <div class="nb-comments">
+            <form method="POST" action="">
+                <button class="comments" value={{.Id}} name="idPost"></button>
+            </form>
+            <form method="POST" action="">
+                <button class="create-comments-style" value={{.Id}} name="id-post"></button>
+            </form>
+        </div>
+    </div>
+    <script src="/index.js"></script>
+    <script src="/chat.js"></script>
+</body>
+
+</html>
